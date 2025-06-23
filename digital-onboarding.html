@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Onboarding Strategy for Farmer.Chat Ethiopia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 45vh;
+        }
+        .kpi-chart-container {
+             position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (max-width: 768px) {
+            .chart-container, .kpi-chart-container {
+                height: 300px;
+                max-height: 50vh;
+            }
+        }
+        .heavy-shadow {
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center bg-gradient-to-r from-[#073B4C] to-[#118AB2] text-white py-16 md:py-20 rounded-2xl shadow-xl my-12 md:my-16 max-w-full mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">Digital Onboarding Strategy</h1>
+            <h2 class="mt-4 text-2xl md:text-4xl font-bold text-[#1ca069] leading-tight">for Farmer.Chat Ethiopia: High-Level Plan</h2>
+            <p class="mt-4 text-lg md:text-xl font-medium max-w-3xl mx-auto opacity-90">Co-creating a scalable, inclusive strategy to empower farmers.</p>
+        </header>
+
+        <section class="bg-white rounded-2xl shadow-lg p-0 md:p-12 my-12 text-center">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
+                <div class="flex flex-row justify-around items-center gap-4">
+                    <div class="p-2 text-center">
+                        <span class="text-3xl font-black text-[#118AB2] md:text-4xl">30,000</span>
+                        <p class="text-xs font-semibold text-gray-600 md:text-sm">FARMERS</p>
+                    </div>
+                    <div class="p-2 text-center">
+                        <span class="text-3xl font-black text-[#118AB2] md:text-4xl">60</span>
+                        <p class="text-xs font-semibold text-gray-600 md:text-sm">WOREDAS</p>
+                    </div>
+                    <div class="p-2 text-center">
+                        <span class="text-3xl font-black text-[#118AB2] md:text-4xl">4-6</span>
+                        <p class="text-xs font-semibold text-gray-600 md:text-sm">MONTHS</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 border-l-4 border-blue-200 p-4 rounded-lg md:h-full flex items-center justify-center text-left">
+                    <p class="text-xl font-medium text-gray-700">Our goal is to onboard <strong class="text-[#1ca069]">30,000 farmers</strong> using a <strong class="text-[#1ca069]">digital-first, inclusive approach</strong> that is <strong class="text-[#1ca069]">scalable, localized, and efficient</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="snapshot" class="bg-white rounded-2xl shadow-lg p-8 md:p-12 my-12">
+             <h3 class="text-3xl font-bold text-center text-[#1ca069] mb-8">Where We’re Starting & Who We’re Targeting</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div>
+                    <h4 class="font-bold text-xl text-[#118AB2] mb-4">🔍 Existing Strengths</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-xl text-[#1ca069] mr-3">✅</span><span><strong>Demonstrated Demand:</strong> 30K active users.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#1ca069] mr-3">✅</span><span><strong>Digital Presence:</b> Active Telegram groups in 60 woredas.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#1ca069] mr-3">✅</span><span><strong>Data Foundation:</strong> Farmer DB with names, phones, and crops.</span></li>
+                        <li class="flex items-start"><span class="text-xl text-[#1ca069] mr-3">✅</span><span><strong>Proven Tech:</strong> Platform is adopted and validated in Amharic.</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-xl text-[#118AB2] mb-4">🎯 Strategic Pillars & Segments</h4>
+                     <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🤝</span><div><strong>Leverage Trust:</strong> Use existing community relationships.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">📱</span><div><strong>Digital-First Engagement:</strong> Scale via SMS, WhatsApp, and Telegram.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">📊</span><div><strong>Segmented Onboarding:</strong> Tailor flows by engagement level.</div></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#1ca069]">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="text-5xl">🚀</div>
+                        <div class="flex flex-col text-left">
+                            <h5 class="text-xl font-bold text-[#1ca069]">5K High Engagement</h5>
+                            <p class="text-sm text-gray-600">Fast-track (minimal handholding)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#118AB2]">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="text-5xl">⏳</div>
+                        <div class="flex flex-col text-left">
+                            <h5 class="text-xl font-bold text-[#118AB2]">15K Medium Engagement</h5>
+                            <p class="text-sm text-gray-600">Standard digital onboarding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#FFD166]">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="text-5xl">🤝</div>
+                        <div class="flex flex-col text-left">
+                            <h5 class="text-xl font-bold text-[#FFD166]">10K Low Engagement</h5>
+                            <p class="text-sm text-gray-600">Intensive support (voice, champions)</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="framework" class="mt-24 my-16">
+            <h3 class="text-3xl font-bold text-center text-[#1ca069] mb-8">How We’ll Roll Out the Strategy</h3>
+            <div class="relative flex flex-col md:flex-row justify-between items-center w-full max-w-5xl mx-auto">
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-300 hidden md:block"></div>
+                <div class="relative flex-1 text-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#1ca069] mb-4 md:mb-0">
+                    <h4 class="font-bold text-lg text-[#073B4C]">📍 Phase 1: Foundation</h4>
+                    <p class="text-sm text-gray-600">(Month 1) Segment, build content, train champions, and run a pilot.</p>
+                </div>
+                <div class="relative flex-1 text-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#1ca069] mx-0 md:mx-4 mb-4 md:mb-0">
+                    <h4 class="font-bold text-lg text-[#073B4C]">🚀 Phase 2: Rollout</h4>
+                    <p class="text-sm text-gray-600">(Months 2-3) Onboard in batches, monitor feedback, and iterate.</p>
+                </div>
+                <div class="relative flex-1 text-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#1ca069] mb-4 md:mb-0">
+                    <h4 class="font-bold text-lg text-[#073B4C]">🔁 Phase 3: Optimization</h4>
+                    <p class="text-sm text-gray-600">(Months 4-6) Boost adoption, highlight success, and document playbook.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hybrid-combined" class="bg-white rounded-2xl shadow-lg p-8 md:p-12 my-16">
+            <h3 class="text-3xl font-bold text-center text-[#1ca069] mb-2">The Hybrid Outreach Model & Key Roles</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">We combine the trust of in-person contact with the scale of digital tools, supported by dedicated roles, to ensure no farmer is left behind.</p>
+
+            <div class="flex flex-col md:flex-row items-stretch justify-center gap-0 max-w-5xl mx-auto mb-12">
+                <div class="flex-1 bg-white rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl shadow-md p-6 text-center border-b-4 border-[#118AB2]">
+                    <h4 class="font-bold text-2xl text-[#118AB2] mb-4">👥 In-Person</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 text-left">
+                        <li>Builds face-to-face trust</li>
+                        <li>Provides hands-on literacy support</li>
+                        <li>Engages marginalized groups</li>
+                        <li>Uses DAs and local agents</li>
+                    </ul>
+                </div>
+                <div class="flex-1 bg-[#1ca069] text-white shadow-md p-6 text-center z-10">
+                     <h4 class="font-bold text-2xl mb-4">🤝 The Hybrid Middle</h4>
+                     <ul class="text-sm space-y-2 text-left">
+                        <li>Digital Champions bridge gaps</li>
+                        <li>Offline invites & online support</li>
+                        <li>Voice onboarding for inclusivity</li>
+                        <li>Human follow-ups for drop-offs</li>
+                    </ul>
+                </div>
+                <div class="flex-1 bg-white rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl shadow-md p-6 text-center border-b-4 border-[#073B4C]">
+                     <h4 class="font-bold text-2xl text-[#073B4C] mb-4">📱 Digital</h4>
+                      <ul class="text-sm text-gray-700 space-y-2 text-left">
+                        <li>Scales via SMS & Telegram</li>
+                        <li>Provides 24/7 chatbot access</li>
+                        <li>Is cost-effective and fast</li>
+                        <li>Targets users with data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-xl text-[#073B4C] mb-4 text-center">👥 Key Roles: Digital Champions</h4>
+                    <ul class="list-none text-gray-700 space-y-2">
+                        <li><span class="text-xl text-[#1ca069] mr-2">🧑‍🌾</span><span>20–25 trained local advocates</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">✅</span><span>Help with onboarding & troubleshooting</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">💬</span><span>Collect insights & relay farmer needs</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-xl text-[#073B4C] mb-4 text-center">🤝 Key Roles: Public Extension Agents / DAs</h4>
+                    <ul class="list-none text-gray-700 space-y-2">
+                        <li><span class="text-xl text-[#1ca069] mr-2"> trustworthy</span><span>Trusted messengers in rural areas</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">🌱</span><span>Introduce Farmer.Chat during visits/demos</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">📅</span><span>Align onboarding with agri cycles/trainings</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="font-bold text-xl text-[#073B4C] mb-4 text-center">📱 Key Roles: Digital Tools</h4>
+                    <ul class="list-none text-gray-700 space-y-2">
+                        <li><span class="text-xl text-[#1ca069] mr-2">✉️</span><span>SMS blasts for awareness</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">💬</span><span>WhatsApp/Telegram onboarding journeys</span></li>
+                        <li><span class="text-xl text-[#1ca069] mr-2">🔊</span><span>Voice messages in local languages</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="my-16">
+            <h3 class="text-3xl font-bold text-center text-[#1ca069] mb-8">What We Need to Execute the Plan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                    <div class="text-6xl mb-4">💻</div>
+                    <h4 class="text-xl font-bold mb-3 text-[#073B4C]">Technology</h4>
+                    <ul class="text-gray-600">
+                        <li>SMS Gateway</li>
+                        <li>Amharic/Voice Chatbot</li>
+                        <li>Analytics Dashboard</li>
+                        <li>Ethiopia App Optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                    <div class="text-6xl mb-4">👥</div>
+                    <h4 class="text-xl font-bold mb-3 text-[#073B4C]">People</h4>
+                    <ul class="text-gray-600">
+                        <li>1 Project Manager</li>
+                        <li>20-25 Digital Champions</li>
+                        <li>2-3 Tech Support Staff</li>
+                        <li>1 Content Specialist</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                    <div class="text-6xl mb-4">🤝</div>
+                    <h4 class="text-xl font-bold mb-3 text-[#073B4C]">Partnerships</h4>
+                    <ul class="text-gray-600">
+                        <li>Development Agents</li>
+                        <li>Co-ops & Women’s Groups</li>
+                        <li>Woreda Administrators</li>
+                        <li>Telecom providers for SMS gateway</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 bg-[#1ca069] border-l-4 border-[#118AB2] text-white p-6 rounded-r-lg max-w-full mx-auto text-center shadow-lg grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                <div class="md:col-span-1">
+                    <p class="font-bold text-xl md:text-2xl">💰 Estimated Budget:</p>
+                    <p class="font-bold text-xl md:text-2xl">$$$ - $$$</p>
+                    <p class="text-sm md:text-base text-white">over 6 months</p>
+                </div>
+                <div class="md:col-span-1 space-y-2 text-white text-left">
+                    <p class="flex justify-between items-center"><span class="font-medium">Technology & Infrastructure:</span> <span class="font-bold">40%</span></p>
+                    <p class="flex justify-between items-center"><span class="font-medium">Human Resources:</span> <span class="font-bold">35%</span></p>
+                </div>
+                <div class="md:col-span-1 space-y-2 text-white text-left">
+                    <p class="flex justify-between items-center"><span class="font-medium">Communications & Content:</span> <span class="font-bold">15%</span></p>
+                    <p class="flex justify-between items-center"><span class="font-medium">Operations & Monitoring:</span> <span class="font-bold">10%</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kpis" class="my-16">
+            <h3 class="text-3xl font-bold text-center text-[#1ca069] mb-8">How We'll Measure Success</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                 <div class="lg:col-span-1 bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="text-xl font-bold text-center mb-4">🎯 Onboarding Funnel Targets</h4>
+                    <ul class="space-y-3 text-gray-700 text-left px-4 py-2">
+                        <li class="flex items-center justify-between">
+                            <span class="flex items-center"><span class="text-2xl text-[#118AB2] mr-2">📡</span> Reach:</span>
+                            <span class="font-bold">90%</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="flex items-center"><span class="text-2xl text-[#1ca069] mr-2">🤝</span> Engagement:</span>
+                            <span class="font-bold">70%</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="flex items-center"><span class="text-2xl text-[#FFD166] mr-2">✅</span> Completion:</span>
+                            <span class="font-bold">70%</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="flex items-center"><span class="text-2xl text-[#FF6B6B] mr-2">🔄</span> Active Use:</span>
+                            <span class="font-bold">30%</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-1 bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="text-xl font-bold text-center mb-4">📈 Business Impacts</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center gap-4">
+                            <div class="text-3xl">🎯</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-[#1ca069]">&lt; $$ Cost Per Farmer</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="text-3xl">💬</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-[#1ca069]">60% Retention After 3 Months</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="text-3xl">🌾</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-[#1ca069]">Positive Self-Reported Improvements</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="text-3xl">🌱</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-[#1ca069]">Scalability Proof for future expansion</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-1 bg-white rounded-2xl shadow-lg p-6">
+                    <h4 class="text-xl font-bold text-center mb-4">📈 Quality Indicators</h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-3xl text-[#1ca069] mr-3">💡</span><span><strong>Feature Usage:</strong> Voice queries, image sharing, weather checks.</span></li>
+                        <li class="flex items-start"><span class="text-3xl text-[#1ca069] mr-3">🗺️</span><span><strong>Geographic Coverage:</strong> All 60 woredas with 60%+ success rate.</span></li>
+                        <li class="flex items-start"><span class="text-3xl text-[#1ca069] mr-3">⭐</span><span><strong>User Satisfaction:</strong> 4+ star rating from onboarded farmers.</span></li>
+                        <li class="flex items-start"><span class="text-3xl text-[#1ca069] mr-3">⏱️</span><span><strong>Support Efficiency:</strong> &lt;24 hour response.</span></li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="discussion-and-actions-combined" class="bg-white rounded-2xl shadow-lg p-8 md:p-12 my-16">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold text-[#1ca069] mb-8">What We Need to Align On</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-[#1ca069]">
+                        <div class="text-4xl mb-3">🛠️</div>
+                        <h4 class="font-bold text-lg text-[#073B4C] mb-2">Technical</h4>
+                        <ul class="text-sm text-gray-600 list-none p-0 space-y-1">
+                            <li>SMS gateway in place?</li>
+                            <li>Support basic phone users?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-[#118AB2]">
+                        <div class="text-4xl mb-3">🗣️</div>
+                        <h4 class="font-bold text-lg text-[#073B4C] mb-2">Content</h4>
+                        <ul class="text-sm text-gray-600 list-none p-0 space-y-1">
+                            <li>Depth of Amharic needed?</li>
+                            <li>Include Oromo, Tigrinya?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-[#FFD166]">
+                        <div class="text-4xl mb-3">🤝</div>
+                        <h4 class="font-bold text-lg text-[#073B4C] mb-2">Partnerships</h4>
+                        <ul class="text-sm text-gray-600 list-none p-0 space-y-1">
+                            <li>Essential partners?</li>
+                            <li>Engage gov’t/extension agents?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-[#FF6B6B]">
+                        <div class="text-4xl mb-3">👥</div>
+                        <h4 class="font-bold text-lg text-[#073B4C] mb-2">Resources</h4>
+                        <ul class="text-sm text-gray-600 list-none p-0 space-y-1">
+                            <li>Hire local or centralize?</li>
+                            <li>Stretch team capacity?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-[#073B4C]">
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h4 class="font-bold text-lg text-[#073B4C] mb-2">Impact</h4>
+                        <ul class="text-sm text-gray-600 list-none p-0 space-y-1">
+                            <li>Success beyond usage?</li>
+                            <li>Measure agri change?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <h3 class="text-3xl font-bold text-[#073B4C] mb-8">Let's Leave With Action</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto text-left">
+                    <div class="bg-blue-50 border-l-4 border-[#118AB2] p-6 rounded-r-lg">
+                        <h4 class="font-bold text-xl mb-4 text-[#073B4C]">✅ Decisions to Finalize</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>💰 Budget approval and staff allocations</li>
+                            <li>🤝 Top-priority partnerships to pursue</li>
+                            <li>📅 Rollout timeline matched to team capacity</li>
+                            <li>⚙️ Confirm technical integrations for launch</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 border-l-4 border-[#1ca069] p-6 rounded-r-lg">
+                        <h4 class="font-bold text-xl mb-4 text-[#073B4C]">🚀 Quick Wins to Launch</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>📊 Analyze and segment the 30K farmer database</li>
+                            <li>🧪 Design pilot flow for 2–3 initial woredas</li>
+                            <li>🔄 Sync with Program team on available resources</li>
+                            <li>🗂️ Review content needs (Amharic + Afan Oromo)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 text-gray-500 text-sm"><p>Farmer.Chat Ethiopia | Digital Onboarding Strategy</p></footer>
+
+    <script>
+        // Chart.register(ChartDataLabels) is called here to ensure it's registered before any Chart instances are created.
+        Chart.register(ChartDataLabels);
+
+        const universalTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (str, maxWidth = 16) => {
+            if (str.length <= maxWidth) return str;
+            let wrapped = [];
+            let words = str.split(' ');
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxWidth && currentLine.length > 0) {
+                    wrapped.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += ' ' + word;
+            });
+            wrapped.push(currentLine.trim());
+            return wrapped;
+        };
+
+
+        // The kpiCtx chart initialization code was commented out in the user's provided code and is no longer needed here.
+        // I will remove the empty event listener for DOMContentLoaded as well if it's the only content in it.
+    </script>
+</body>
+</html>
